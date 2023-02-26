@@ -1,9 +1,17 @@
 body {
-    font-family: 'Montserrat', cursive;
+    font-family: 'Ink Free', cursive;
     background-image: url('images/background.jpg');
     background-attachment: fixed;
     background-size: cover;
     margin: 0px;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
 }
 
 .header {
@@ -42,4 +50,37 @@ button {
 
 .button-nav.active {
     border-bottom: 2px solid #eee;
+}
+
+.main {
+    max-width: 700px;
+    padding: 10px;
+    margin: 15px 0px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid #222;
+    font-family: 'Leelawadee', cursive;
+    color: #eee;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 525px;
+    width: 618px;
+    animation: fadeIn 1.5s;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1px;
+    width: 100%;
+    border-top: 1px solid #222;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-family: 'Leelawadee', cursive;
+    color: #eee;
 }
