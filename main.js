@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("console.log('hello, juan');\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("const btnNav = document.querySelectorAll('.button-nav');\r\n// Add active class if button clicked and remove it from the rest\r\nbtnNav.forEach((button) => {\r\n    button.addEventListener('click', () => {\r\n        if (button.classList.value === \"button-nav active\") return;\r\n        const oldButton = document.querySelector('.active');\r\n        oldButton.classList.remove('active');\r\n        button.classList.add('active');\r\n    });\r\n});\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
 
 /***/ })
 
