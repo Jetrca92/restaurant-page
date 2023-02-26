@@ -1,0 +1,41 @@
+body {
+    font-family: 'Montserrat', cursive;
+    background-image: url('images/background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.restaurant-name {
+    margin-bottom: 1rem;
+    font-family: 'Ink Free', cursive;
+    font-size: 76px;
+    color: #eee;
+}
+
+button {
+    font-family: 'Ink Free', cursive;
+    color: inherit;
+    cursor: pointer;
+    border-style: none;
+    outline: none;
+  }
+
+.button-nav {
+    padding: 2rem;
+    font-size: 2rem;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    transition: transform 0.3s;
+    color: #eee;
+  }
