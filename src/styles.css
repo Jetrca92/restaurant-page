@@ -1,3 +1,7 @@
+html {
+    margin: 0px;
+}
+
 body {
     font-family: 'Ink Free', cursive;
     background-image: url('images/background.jpg');
@@ -20,7 +24,6 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 2rem;
     background-color: rgba(0, 0, 0, 0.9);
 }
 
@@ -53,6 +56,7 @@ button {
 }
 
 .main {
+    display: flex;
     max-width: 700px;
     padding: 10px;
     margin: 15px 0px;
@@ -61,6 +65,11 @@ button {
     border: 1px solid #222;
     font-family: 'Leelawadee', cursive;
     color: #eee;
+}
+
+.paragraph {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .home {
@@ -84,3 +93,19 @@ button {
     font-family: 'Leelawadee', cursive;
     color: #eee;
 }
+
+@media only screen and (max-width: 600px) {
+    #content {
+      height: auto;
+    }
+  
+    .main, .home {
+      max-width: 100%;
+    }
+  
+    .home {
+      width: 100%;
+      padding: 0 10px;
+      height: auto;
+    }
+  }
