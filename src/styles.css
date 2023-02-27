@@ -85,13 +85,19 @@ button {
 .footer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1px;
+    justify-content: center;
     width: 100%;
     border-top: 1px solid #222;
     background-color: rgba(0, 0, 0, 0.6);
+}
+
+.footer-text {
     font-family: 'Leelawadee', cursive;
     color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 @media only screen and (max-width: 600px) {
