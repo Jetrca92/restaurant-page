@@ -17,7 +17,8 @@ btnNav.forEach((button) => {
 btnMenu.addEventListener('click', () => {
     document.querySelector('.home').style.display = 'none';
     document.querySelector('.contact').style.display = 'none';
-    document.querySelector('.menu').style.display = 'flex';
+    document.querySelector('.menu').style.display = 'grid';
+    document.querySelector('body').style.backgroundImage = "url('../src/images/background2.jpg')";
 })
 
 // Manage display for home
@@ -25,6 +26,7 @@ btnHome.addEventListener('click', () => {
     document.querySelector('.home').style.display = 'flex';
     document.querySelector('.contact').style.display = 'none';
     document.querySelector('.menu').style.display = 'none';
+    document.querySelector('body').style.backgroundImage = "url('../src/images/background.jpg')";
 })
 
 // Manage display for contact
