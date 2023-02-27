@@ -1,4 +1,8 @@
 const btnNav = document.querySelectorAll('.button-nav');
+const btnMenu = document.querySelector('#menu');
+const btnHome = document.querySelector('#home');
+const btnContact = document.querySelector('#contact');
+
 // Add active class if button clicked and remove it from the rest
 btnNav.forEach((button) => {
     button.addEventListener('click', () => {
@@ -8,3 +12,24 @@ btnNav.forEach((button) => {
         button.classList.add('active');
     });
 });
+
+// Manage display for menu
+btnMenu.addEventListener('click', () => {
+    document.querySelector('.home').style.display = 'none';
+    document.querySelector('.contact').style.display = 'none';
+    document.querySelector('.menu').style.display = 'flex';
+})
+
+// Manage display for home
+btnHome.addEventListener('click', () => {
+    document.querySelector('.home').style.display = 'flex';
+    document.querySelector('.contact').style.display = 'none';
+    document.querySelector('.menu').style.display = 'none';
+})
+
+// Manage display for contact
+btnContact.addEventListener('click', () => {
+    document.querySelector('.home').style.display = 'none';
+    document.querySelector('.contact').style.display = 'flex';
+    document.querySelector('.menu').style.display = 'none';
+})
