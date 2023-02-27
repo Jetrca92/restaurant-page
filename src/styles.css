@@ -101,6 +101,10 @@ button {
     transition: background-color 0.3s;
 }
 
+.menu-item img {
+    width: 60%;
+}
+
 
 .footer {
     display: flex;
