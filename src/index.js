@@ -64,13 +64,16 @@ function appendFooter() {
 }
 
 // Generate content for home
-const home = document.createElement('div');
-home.setAttribute('class', 'home');
-for (let i = 0; i < 3; i++) {
-    const p = document.createElement('p');
-    p.setAttribute('class', 'paragraph');
-    p.innerHTML = homeContent[i];
-    home.appendChild(p);
+function generateHome() {
+    const home = document.createElement('div');
+    home.setAttribute('class', 'home');
+    for (let i = 0; i < 3; i++) {
+        const p = document.createElement('p');
+        p.setAttribute('class', 'paragraph');
+        p.innerHTML = homeContent[i];
+        home.appendChild(p);
+    }
+    main.appendChild(home);
+    appendFooter();
 }
-main.appendChild(home);
-appendFooter();
+generateHome();
