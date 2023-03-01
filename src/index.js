@@ -20,7 +20,7 @@ const contactContent = {
     "phone": "📞 03 5701 521",
     "address": "🏠 Petrov trg 7, Šempeter v Savinjski dolini",
     "img": "../src/images/restaurant-location.jpg"
-}
+};
 
 
 const btnNav = document.querySelectorAll('.button-nav');
@@ -122,8 +122,8 @@ function generateContact() {
     contact.setAttribute('class', 'contact');
     number.innerHTML = `${contactContent.phone}`;
     address.innerHTML = `${contactContent.address}`;
-    img.setAttribute('src', `${contactContent.img}`);
-    img.setAttribute('alt', 'Restaurant location');
+    location.setAttribute('src', `${contactContent.img}`);
+    location.setAttribute('alt', 'Restaurant location');
     contact.appendChild(number);
     contact.appendChild(address);
     contact.appendChild(location);
@@ -131,4 +131,5 @@ function generateContact() {
 }
 generateHome();
 generateMenu();
+generateContact();
 appendFooter();
