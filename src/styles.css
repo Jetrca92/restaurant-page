@@ -1,0 +1,205 @@
+html {
+    margin: 0px;
+}
+
+body {
+    font-family: 'Ink Free', cursive;
+    background-image: url('images/background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0px;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.restaurant-name {
+    margin-bottom: 1rem;
+    font-family: 'Ink Free', cursive;
+    font-size: 76px;
+    color: #eee;
+}
+
+button {
+    font-family: 'Ink Free', cursive;
+    color: inherit;
+    cursor: pointer;
+    border-style: none;
+    outline: none;
+}
+
+.button-nav {
+    padding: 20px;
+    font-size: 30px;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    transition: transform 0.3s;
+    color: #eee;
+}
+
+.button-nav.active {
+    border-bottom: 2px solid #eee;
+}
+
+.main {
+    display: flex;
+    max-width: 700px;
+    padding: 10px;
+    margin: 15px 0px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid #222;
+    font-family: 'Leelawadee', cursive;
+    color: #eee;
+}
+
+.paragraph {
+    display: flex;
+    margin-block-start: 0px;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 525px;
+    width: 618px;
+    animation: fadeIn 1.5s;
+    padding: 40px;
+}
+
+.menu {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    animation: fadeIn 1.5s;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    padding: 20px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: rgba(99, 99, 99, 0.4);
+}
+
+.menu-item img {
+    width: 60%;
+}
+
+.menu-item p {
+    font-size: 20px;
+    text-align: center;
+    margin: 0px;
+
+}
+
+.menu-item h2 {
+    margin: 0px;
+    padding: 15px;
+}
+
+.contact {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 525px;
+    width: 618px;
+    animation: fadeIn 1.5s;
+}
+  
+.contact p {
+    font-size: 20px;
+    text-align: center;
+    margin: 0px;
+    width: 100%;
+    padding: 5px;
+}
+  
+.contact img {
+    max-height: 420px;
+    padding: 5px;
+    opacity: 90%;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-top: 1px solid #222;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.footer-text {
+    font-family: 'Leelawadee', cursive;
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+}
+
+@media (max-width: 700px) {
+    .home,
+    .contact {
+        height: 100%;
+        width: 100%;
+    }
+    .contact img {
+        width: 75%;
+    }
+  
+    .menu {
+        grid-template-columns: 1fr;
+    }
+  
+    .menu img {
+        width: 50%;
+    }
+}
+  
+@media (max-width: 500px) {
+    html {
+        font-size: 57.5%;
+    }
+  
+    .home img {
+        width: 80%;
+    }
+}
+  
