@@ -9,17 +9,17 @@ const homeContent = ["Podjetje Berosi d.o.o. je bilo ustanovljeno leta 2003 s st
 "Za tiste, ki si želijo uživati v naših dobrotah doma ali drugje, pa pripravimo tudi catering. Pridite in se prepričajte sami o naši ponudbi, krožnikih in okusih, ki jih pripravlja uigran #NekropolsTeam."]
 const footerContent = ["Delovni čas", "PON - ČET: 8:00 - 22:00", "PET - SOB: 8:00 - 22:00", "NED: 8:00 - 22:00"];
 const menuContent = [
-    {"name": "Nekropolis", "img": "../src/images/pica_nekropolis.jpg", "ingredients": "Tomato sauce, cheese, bacon, onions, sour cream, olives"},
-    {"name": "Karst", "img": "../src/images/pica_kraska.jpg", "ingredients": "Tomato sauce, cheese, Karst dried ham, olives"},
-    {"name": "Valentine", "img": "../src/images/pica_valentinovo.jpg", "ingredients": "Tomato sauce, cheese, bacon, onions, mozzarela"},
-    {"name": "Fried steak", "img": "../src/images/dunajski_pomfrit.jpg", "ingredients": "Fried steak with ham and cheese, side dish"},
-    {"name": "XXL steak", "img": "../src/images/snicl_prilogo.jpg", "ingredients": "XXL steak (300g), french fries"},
-    {"name": "Burger", "img": "../src/images/burger.jpg", "ingredients": "Applewood smoked bacon, american cheese, lettuce, tomato, mayo, classic bun"}
+    {"name": "Nekropolis", "img": "src/images/pica_nekropolis.jpg", "ingredients": "Tomato sauce, cheese, bacon, onions, sour cream, olives"},
+    {"name": "Karst", "img": "src/images/pica_kraska.jpg", "ingredients": "Tomato sauce, cheese, Karst dried ham, olives"},
+    {"name": "Valentine", "img": "src/images/pica_valentinovo.jpg", "ingredients": "Tomato sauce, cheese, bacon, onions, mozzarela"},
+    {"name": "Fried steak", "img": "src/images/dunajski_pomfrit.jpg", "ingredients": "Fried steak with ham and cheese, side dish"},
+    {"name": "XXL steak", "img": "src/images/snicl_prilogo.jpg", "ingredients": "XXL steak (300g), french fries"},
+    {"name": "Burger", "img": "src/images/burger.jpg", "ingredients": "Applewood smoked bacon, american cheese, lettuce, tomato, mayo, classic bun"}
 ];
 const contactContent = {
     "phone": "📞 03 5701 521",
     "address": "🏠 Petrov trg 7, Šempeter v Savinjski dolini",
-    "img": "../src/images/restaurant-location.jpg"
+    "img": "src/images/restaurant-location.jpg"
 };
 
 
@@ -43,7 +43,7 @@ btnMenu.addEventListener('click', () => {
     document.querySelector('.home').style.display = 'none';
     document.querySelector('.contact').style.display = 'none';
     document.querySelector('.menu').style.display = 'grid';
-    document.querySelector('body').style.backgroundImage = "url('../src/images/background2.jpg')";
+    document.querySelector('body').style.backgroundImage = "url('src/images/background2.jpg')";
   });
 
 // Manage display for home
@@ -51,7 +51,7 @@ btnHome.addEventListener('click', () => {
     document.querySelector('.home').style.display = 'flex';
     document.querySelector('.contact').style.display = 'none';
     document.querySelector('.menu').style.display = 'none';
-    document.querySelector('body').style.backgroundImage = "url('../src/images/background.jpg')";
+    document.querySelector('body').style.backgroundImage = "url('src/images/background.jpg')";
 })
 
 // Manage display for contact
@@ -59,7 +59,7 @@ btnContact.addEventListener('click', () => {
     document.querySelector('.home').style.display = 'none';
     document.querySelector('.contact').style.display = 'flex';
     document.querySelector('.menu').style.display = 'none';
-    document.querySelector('body').style.backgroundImage = "url('../src/images/home_slika.jpg')";
+    document.querySelector('body').style.backgroundImage = "url('src/images/home_slika.jpg')";
 })
 
 // Append footer
