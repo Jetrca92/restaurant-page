@@ -7,6 +7,21 @@ content.appendChild(main);
 const homeContent = ["Podjetje Berosi d.o.o. je bilo ustanovljeno leta 2003 s strani treh gostincev, Roberta Štojsa, Bena in Simona Božiča, ki so se odločili popestriti gostinsko ponudbo v Savinjski dolini.", 
 "Njihova picerija in restavracija na Petrovem trgu,imenovana Nekropolis, je že dolgo priljubljena med gosti zaradi prijaznosti, široke ponudbe hrane in pijače, okusnosti ter posebej prijetnega vzdušja. Naša ponudba vključuje več kot 20 vrst različnih vsakodnevnih malic in dve dnevni malici, slovenske pivovarje, vinarje ter jedi iz lokalnih sestavin. V naši ponudbi lahko izbirate med široko ponudbo pic, domačih testenin, mehiške ponudbe, lignjev, solat in sladic ter burgerjev.",
 "Za tiste, ki si želijo uživati v naših dobrotah doma ali drugje, pa pripravimo tudi catering. Pridite in se prepričajte sami o naši ponudbi, krožnikih in okusih, ki jih pripravlja uigran #NekropolsTeam."]
+const footerContent = ["Delovni čas", "PON - ČET: 8:00 - 22:00", "PET - SOB: 8:00 - 22:00", "NED: 8:00 - 22:00"];
+const menuContent = [
+    {"name": "Nekropolis", "img": "../src/images/pica_nekropolis.jpg", "ingredients": "Tomato sauce, cheese, bacon, onions, sour cream, olives"},
+    {"name": "Karst", "img": "../src/images/pica_kraska.jpg", "ingredients": "Tomato sauce, cheese, Karst dried ham, olives"},
+    {"name": "Valentine", "img": "../src/images/pica_valentinovo.jpg", "ingredients": "Tomato sauce, cheese, bacon, onions, mozzarela"},
+    {"name": "Fried steak", "img": "../src/images/dunajski_pomfrit.jpg", "ingredients": "Fried steak with ham and cheese, side dish"},
+    {"name": "XXL steak", "img": "../src/images/snicl_prilogo.jpg", "ingredients": "XXL steak (300g), french fries"},
+    {"name": "Burger", "img": "../src/images/burger.jpg", "ingredients": "Applewood smoked bacon, american cheese, lettuce, tomato, mayo, classic bun"}
+];
+const contactContent = {
+    "phone": "📞 03 5701 521",
+    "address": "🏠 Petrov trg 7, Šempeter v Savinjski dolini",
+    "img": "../src/images/restaurant-location.jpg"
+}
+
 
 const btnNav = document.querySelectorAll('.button-nav');
 const btnMenu = document.querySelector('#menu');
@@ -48,7 +63,6 @@ btnContact.addEventListener('click', () => {
 })
 
 // Append footer
-const footerContent = ["Delovni čas", "PON - ČET: 8:00 - 22:00", "PET - SOB: 8:00 - 22:00", "NED: 8:00 - 22:00"];
 function appendFooter() {
     const footer = document.createElement('footer');
     footer.setAttribute('class', 'footer');
@@ -74,6 +88,47 @@ function generateHome() {
         home.appendChild(p);
     }
     main.appendChild(home);
-    appendFooter();
+}
+
+// Generate content for Menu
+function generateMenu() {
+    const menu = document.createElement('div');
+    menu.setAttribute('class', 'menu');
+    for (let i = 0; i < menuContent.length; i++) {
+        const menuItem = document.createElement('div');
+        const img = document.createElement('img');
+        const h2 = document.createElement('h2');
+        const p = document.createElement('p');
+
+        menuItem.setAttribute('class', 'menu-item');
+        img.setAttribute('src', `${menuContent[i].img}`);
+        img.setAttribute('alt', `${menuContent[i].name}`);
+        h2.innerHTML = menuContent[i].name;
+        p.innerHTML = menuContent[i].ingredients;
+        menuItem.appendChild(img);
+        menuItem.appendChild(h2);
+        menuItem.appendChild(p);
+        menu.appendChild(menuItem);
+    }
+    main.appendChild(menu);
+}
+
+function generateContact() {
+    const contact = document.createElement('div');
+    const number = document.createElement('p');
+    const address = document.createElement('p');
+    const location = document.createElement('img');
+
+    contact.setAttribute('class', 'contact');
+    number.innerHTML = `${contactContent.phone}`;
+    address.innerHTML = `${contactContent.address}`;
+    img.setAttribute('src', `${contactContent.img}`);
+    img.setAttribute('alt', 'Restaurant location');
+    contact.appendChild(number);
+    contact.appendChild(address);
+    contact.appendChild(location);
+    main.appendChild(contact);
 }
 generateHome();
+generateMenu();
+appendFooter();
